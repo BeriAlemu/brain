@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap");
+
+@import "tailwindcss";
+
+:root {
+  --font-sora: "Sora", sans-serif;
+  --font-code: "Source Code Pro", monospace;
+  --font-grotesk: "Space Grotesk", sans-serif;
+  color-scheme: dark;
+}
+
+@theme {
+  --color-color-1: #AC6AFF;
+  --color-color-2: #FFC876;
+  --color-color-3: #FF776F;
+  --color-color-4: #7ADB78;
+  --color-color-5: #858DFF;
+  --color-color-6: #FF98E2;
+
+  --color-stroke-1: #26242C;
+
+  --color-n-1: #FFFFFF;
+  --color-n-2: #CAC6DD;
+  --color-n-3: #ADA8C3;
+  --color-n-4: #757185;
+  --color-n-5: #3F3A52;
+  --color-n-6: #252134;
+  --color-n-7: #15131D;
+  --color-n-8: #0E0C15;
+  --color-n-9: #474060;
+  --color-n-10: #43435C;
+  --color-n-11: #1B1B2E;
+  --color-n-12: #2E2A41;
+  --color-n-13: #6C7275;
+
+  --font-sans: "Sora", sans-serif;
+
+  --tracking-tagline: 0.15em;
+
+  --spacing-15: 3.75rem;
+
+  --opacity-15: 0.15;
+
+  --z-1: 1;
+  --z-2: 2;
+  --z-3: 3;
+  --z-4: 4;
+  --z-5: 5;
+
+  --background-image-radial-gradient:
+    radial-gradient(var(--tw-gradient-stops));
+
+  --background-image-conic-gradient:
+    conic-gradient(
+      from 225deg,
+      #FFC876,
+      #79FFF7,
+      #9F53FF,
+      #FF98E2,
+      #FFC876
+    );
+
+  --background-image-benefit-card-1:
+    url("/assets/benefits/card-1.svg");
+
+  --background-image-benefit-card-2:
+    url("/assets/benefits/card-2.svg");
+
+  --background-image-benefit-card-3:
+    url("/assets/benefits/card-3.svg");
+
+  --background-image-benefit-card-4:
+    url("/assets/benefits/card-4.svg");
+
+  --background-image-benefit-card-5:
+    url("/assets/benefits/card-5.svg");
+
+  --background-image-benefit-card-6:
+    url("/assets/benefits/card-6.svg");
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sora);
+  background-color: var(--color-n-8);
+  color: var(--color-n-1);
+  font-size: 1rem;
+}
+
+@utility font-code {
+  font-family: var(--font-code);
+}
+
+@utility font-grotesk {
+  font-family: var(--font-grotesk);
+}
+
+@utility p-7\.5 {
+  padding: 1.875rem;
+}
+
+@utility p-0\.25 {
+  padding: 0.0625rem;
+}
+
+@utility container {
+  max-width: 77.5rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+
+  @variant md {
+    padding-inline: 2.5rem;
+  }
+
+  @variant lg {
+    padding-inline: 3.75rem;
+  }
+
+  @variant xl {
+    max-width: 87.5rem;
+  }
+}
+
+@utility h1 {
+  font-weight: 600;
+  font-size: 2.5rem;
+  line-height: 3.25rem;
+
+  @variant md {
+    font-size: 2.75rem;
+    line-height: 3.75rem;
+  }
+
+  @variant lg {
+    font-size: 3.25rem;
+    line-height: 4.0625rem;
+  }
+
+  @variant xl {
+    font-size: 3.75rem;
+    line-height: 4.5rem;
+  }
+}
+
+@utility h2 {
+  font-size: 1.75rem;
+  line-height: 2.5rem;
+
+  @variant md {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  @variant lg {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+  }
+
+  @variant xl {
+    font-size: 3rem;
+    line-height: 1.25;
+  }
+}
+
+@utility h3 {
+  font-size: 2rem;
+  line-height: normal;
+
+  @variant md {
+    font-size: 2.5rem;
+  }
+}
+
+@utility h4 {
+  font-size: 2rem;
+  line-height: normal;
+}
+
+@utility h5 {
+  font-size: 1.5rem;
+  line-height: normal;
+}
+
+@utility h6 {
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 2rem;
+}
+
+@utility body-1 {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+
+  @variant md {
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+
+  @variant lg {
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
+}
+
+@utility body-2 {
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+
+  @variant md {
+    font-size: 1rem;
+  }
+}
+
+@utility caption {
+  font-size: 0.875rem;
+}
+
+@utility tagline {
+  font-family: var(--font-grotesk);
+  font-weight: 300;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+@utility quote {
+  font-family: var(--font-code);
+  font-size: 1.125rem;
+  line-height: normal;
+}
+
+@utility button {
+  font-family: var(--font-code);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+@utility tap-highlight-color {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+@utility rotate-45 {
+  rotate: 45deg;
+}
+
+@utility rotate-90 {
+  rotate: 90deg;
+}
+
+@utility rotate-135 {
+  rotate: 135deg;
+}
+
+@utility rotate-180 {
+  rotate: 180deg;
+}
+
+@utility rotate-225 {
+  rotate: 225deg;
+}
+
+@utility rotate-270 {
+  rotate: 270deg;
+}
+
+@utility rotate-315 {
+  rotate: 315deg;
+}
+
+@utility rotate-360 {
+  rotate: 360deg;
+}
+
+@utility -rotate-45 {
+  rotate: -45deg;
+}
+
+@utility -rotate-90 {
+  rotate: -90deg;
+}
+
+@utility -rotate-135 {
+  rotate: -135deg;
+}
+
+@utility -rotate-180 {
+  rotate: -180deg;
+}
+
+@utility -rotate-225 {
+  rotate: -225deg;
+}
+
+@utility -rotate-270 {
+  rotate: -270deg;
+}
+
+@utility -rotate-315 {
+  rotate: -315deg;
+}
+
+@utility -rotate-360 {
+  rotate: -360deg;
+}
